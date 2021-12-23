@@ -25,6 +25,7 @@ body {
 
 .container {
   width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   background: #23424a;
   color: white;
@@ -38,6 +39,7 @@ body {
 
 .container-1 {
   width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   background: white;
   color: black;
