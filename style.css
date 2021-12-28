@@ -30,10 +30,22 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 48px;
 }
 
-.center {
+p { 
+    font-size: 21px; 
+}
+
+h2 { 
+  font-size: 36px;
+}
+
+.hero-1 h2 {
+  color: #87629A;
+}
+
+.center { 
   text-align: center;
 }
 
@@ -69,8 +81,12 @@ h1 {
     color: black;
 }
 
+.hero-1 h2 {
+  color: #87629A;
+}
+
 .hero-2 {
-    padding: 100px 0;
+    padding: 50px 0;
     background-color: #136C72;
     color: white;
 }
