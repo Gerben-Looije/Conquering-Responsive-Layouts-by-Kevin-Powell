@@ -96,6 +96,18 @@ h1 {
     align-self: flex-start;
 }
 
+.nav__link, a {
+    color: rgb(153, 22, 22);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav {
+    text-decoration: none;
+}
+
+
+
 .primary-content {
     width: 62%;
 }
