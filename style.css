@@ -12,7 +12,9 @@
 
 */
 
-*, *::before, *::after {
+*,
+*::before, 
+*::after {
     box-sizing: border-box;
 }
 
@@ -31,8 +33,9 @@ h1 {
     margin-top: 0;
 }
 
+
 .section-title {
-    color: #136C72;
+    color: #87629a;
 }
 
 .btn {
@@ -56,14 +59,18 @@ h1 {
     width: 80%;
     max-width: 1100px;
     margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
 }
 
+
+
 .row {
+    
     /* display: flex => flex container */
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    /* border: 2px solid white; */
     
     
     /* can't use yet */
@@ -101,22 +108,88 @@ h1 {
 header {
     background-color:#136C72;
     padding: 0.5em 0; 
+    text-align: center;
+}
+
+
+
+.nav {
+    width: 100%;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background-color: #072a2d;
+    color: white;
+    transition: opacity 250ms ease;
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: 0.75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    width: 100%;
+}
+
+.hamburger::before { 
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative; 
 }
 
 .logo {
-    display: flex;
-    width: 69.6px;
-    margin-right: 1em;
-    /* border: 2px solid yellow; */
+    width: 69.6px; 
 }
+
+
 .nav {
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid red; */
     flex-grow: 1;
     flex-shrink: 1;
     align-items: center;
 }
+
 
 .nav__item + .nav__item {
     margin-left: 1em;
@@ -169,4 +242,36 @@ header {
 
 .main {
     margin-top: 3em;
+}
+
+@media (min-width: 800px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        height: auto;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero__text {
+        width: 62%;
+    }
+
+    .hero__img {
+        width: 32%;
+        align-self: flex-start;
+        margin: 0;
+    }
+
+    .sidebar {
+        width: 32%;
+    }
+
 }
